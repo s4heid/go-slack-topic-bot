@@ -8,6 +8,7 @@ import (
 	"github.com/dpb587/go-slack-topic-bot/message/boshio"
 	"github.com/dpb587/go-slack-topic-bot/message/github"
 	"github.com/dpb587/go-slack-topic-bot/message/pairist"
+	"github.com/dpb587/go-slack-topic-bot/message/trello"
 	"github.com/dpb587/go-slack-topic-bot/slack"
 )
 
@@ -39,8 +40,8 @@ func main() {
 				message.Conditional(
 					pairist.WorkingHours("06:30", "12:00", "America/Los_Angeles"),
 					pairist.PeopleInRole{
-						Team:          "boshto",
-						Role:          "Interrupt",
+						Team: "boshto",
+						Role: "Interrupt",
 						People: map[string]string{
 							"Gaurab":  "U0A0ZUT43",
 							"Dale":    "U32RHRLE9",
@@ -48,6 +49,17 @@ func main() {
 							"Andrew":  "U17K4GAKW",
 							"Fred":    "UA3MK3AE7",
 							"Jamil":   "U0717EQ04",
+						},
+					},
+				),
+				message.Conditional(
+					pairist.WorkingHours("09:00", "18:00", "Europe/Berlin"),
+					trello.PeopleInRole{
+						Team: "bosh-europe",
+						Role: "Interrupt",
+						People: map[string]string{
+							"s4heid":  "U8MRYTRHU",
+							"beyhan6": "U0D8E67LZ",
 						},
 					},
 				),
