@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:644fe4902c3db01e7dd922cd0e5ed1e1096a594c4228ebb5b36e4c53e7bd56e5"
+  name = "github.com/VojtechVitek/go-trello"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "4a7db23ac973c12e59e3c781b359005995bb3838"
+  version = "v0.1"
+
+[[projects]]
   branch = "master"
   digest = "1:226f155d82a49a4ede16d75f32ae4ef28493be444e37e151da6421d2292c8d6d"
   name = "github.com/dpb587/go-pairist"
@@ -11,6 +19,30 @@
   ]
   pruneopts = "UT"
   revision = "176555c511e261941cb4d4fdd1740c7c16d94f12"
+
+[[projects]]
+  digest = "1:318f1c959a8a740366fce4b1e1eb2fd914036b4af58fbd0a003349b305f118ad"
+  name = "github.com/golang/protobuf"
+  packages = ["proto"]
+  pruneopts = "UT"
+  revision = "b5d812f8a3706043e23a9cd5babf2e5423744d30"
+  version = "v1.3.1"
+
+[[projects]]
+  digest = "1:5273d2bbf38e0c3163483d1740f733ba873be6d612301fb09357b06214971237"
+  name = "github.com/google/go-github"
+  packages = ["github"]
+  pruneopts = "UT"
+  revision = "b041e285fc4f7a936a81027c21c810cbaac2dc13"
+  version = "v25.0.0"
+
+[[projects]]
+  digest = "1:a63cff6b5d8b95638bfe300385d93b2a6d9d687734b863da8e09dc834510a690"
+  name = "github.com/google/go-querystring"
+  packages = ["query"]
+  pruneopts = "UT"
+  revision = "44c6ddd0a2342c386950e880b658017258da92fc"
+  version = "v1.0.0"
 
 [[projects]]
   digest = "1:7b5c6e2eeaa9ae5907c391a91c132abfd5c9e8a784a341b5625e750c67e6825d"
@@ -36,14 +68,55 @@
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
 
+[[projects]]
+  branch = "master"
+  digest = "1:f8b491a7c25030a895a0e579742d07136e6958e77ef2d46e769db8eec4e58fcd"
+  name = "golang.org/x/net"
+  packages = [
+    "context",
+    "context/ctxhttp",
+  ]
+  pruneopts = "UT"
+  revision = "1da14a5a36f220ea3f03470682b737b1dfd5de22"
+
+[[projects]]
+  branch = "master"
+  digest = "1:9927d6aceb89d188e21485f42a7a254e67e6fdcf4260aba375fe18e3c300dfb4"
+  name = "golang.org/x/oauth2"
+  packages = [
+    ".",
+    "internal",
+  ]
+  pruneopts = "UT"
+  revision = "9f3314589c9a9136388751d9adae6b0ed400978a"
+
+[[projects]]
+  digest = "1:6eb6e3b6d9fffb62958cf7f7d88dbbe1dd6839436b0802e194c590667a40412a"
+  name = "google.golang.org/appengine"
+  packages = [
+    "internal",
+    "internal/base",
+    "internal/datastore",
+    "internal/log",
+    "internal/remote_api",
+    "internal/urlfetch",
+    "urlfetch",
+  ]
+  pruneopts = "UT"
+  revision = "54a98f90d1c46b7731eb8fb305d2a321c30ef610"
+  version = "v1.5.0"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/VojtechVitek/go-trello",
     "github.com/dpb587/go-pairist/api",
     "github.com/dpb587/go-pairist/denormalized",
+    "github.com/google/go-github/github",
     "github.com/nlopes/slack",
     "github.com/pkg/errors",
+    "golang.org/x/oauth2",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
